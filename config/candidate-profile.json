@@ -1,0 +1,129 @@
+{
+  "personal": {
+    "first_name": "Manan",
+    "last_name": "Arora",
+    "email": "aromanan@umich.edu",
+    "phone": "+1 (734) 417-9955",
+    "phone_digits": "7344179955",
+    "phone_country_code": "+1",
+    "phone_device_type": "Mobile",
+    "location": "Ann Arbor, MI",
+    "address": {
+      "street": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "zip": "48105",
+      "country": "United States"
+    },
+    "work_authorization": "F1 Visa (CPT/OPT)",
+    "willing_to_relocate": true,
+    "start_date": "2026-05",
+    "salary_expectation": "",
+    "hourly_rate": "50-60",
+    "internship_dates": "May 26, 2026 - July 31, 2026"
+  },
+  "education": [
+    {
+      "school": "University of Michigan",
+      "degree": "Master's",
+      "field": "Computer Engineering",
+      "graduation": "2027-05",
+      "gpa": ""
+    },
+    {
+      "school": "Sardar Patel Institute of Technology",
+      "degree": "Bachelor's",
+      "field": "Electronics and Telecommunications",
+      "graduation": "2023-06",
+      "gpa": "4.0/4.0"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "University of Michigan - Ziyou Song Lab",
+      "title": "Research Assistant",
+      "location": "Ann Arbor, MI",
+      "start_date": "2025-10",
+      "end_date": "Present",
+      "current": true,
+      "description": [
+        "Conducting research on machine learning for second-life electric vehicle (EV) batteries",
+        "Focusing on modeling degradation mechanisms and predicting remaining useful life using electrochemical impedance spectroscopy (EIS) data"
+      ]
+    },
+    {
+      "company": "AuxoAI",
+      "title": "AI Engineer - Experienced Associate",
+      "location": "Bay Area, San Francisco",
+      "start_date": "2023-08",
+      "end_date": "2025-06",
+      "current": false,
+      "description": [
+        "Built self-service analytics platform using Javascript, Python and Claude LLM on AWS that converts natural language to SQL queries, reducing insight delivery time by 90%",
+        "Architected Master Data Management solution using PySpark on Databricks, consolidating disparate data sources into single source of truth",
+        "Developed AI-powered investigation assistant using Agentic AI and Vertex AI models achieving 96% accuracy, reducing investigation time 4x",
+        "Helped scale the organization 10x to 160+ employees while launching production Gen-AI and Data products"
+      ]
+    },
+    {
+      "company": "Indovision Technologies Ltd.",
+      "title": "Software Development Intern",
+      "location": "India",
+      "start_date": "2022-01",
+      "end_date": "2022-07",
+      "current": false,
+      "description": [
+        "Built automated validation tool for IP configurations, reducing setup time from hours to minutes",
+        "Established automated CI/CD pipelines with comprehensive testing, accelerating software delivery by 20%",
+        "Prototyped end-to-end management UX in Figma for fibre-WiFi users"
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "Java", "C++", "SQL", "Dart", "JavaScript", "TypeScript"],
+    "ml": ["PyTorch", "PySpark", "Large Language Models", "Machine Learning", "Computer Vision", "Agentic AI"],
+    "tools": ["AWS (Lambda, S3)", "GCP (GKE, BigQuery)", "Azure (Databricks, Synapse, Data Factory)", "Docker", "Kubernetes", "GitHub", "Apache Kafka", "ETL"]
+  },
+  "links": {
+    "github": "https://github.com/Mack-26",
+    "linkedin": "https://www.linkedin.com/in/mananarora2611/",
+    "portfolio": "",
+    "website": ""
+  },
+  "compliance": {
+    "require_sponsorship": true,
+    "authorized_to_work": true,
+    "is_veteran": false,
+    "veteran_status": "I am not a protected veteran",
+    "disability_status": "I do not want to answer",
+    "gender": "Male",
+    "race_ethnicity": "I do not wish to disclose",
+    "lgbtq": "I do not wish to disclose"
+  },
+  "application_defaults": {
+    "referral_source": "Job Board",
+    "how_did_you_hear": "LinkedIn",
+    "willing_to_background_check": true,
+    "willing_to_drug_test": true,
+    "available_for_interview": true,
+    "can_work_weekends": false,
+    "has_reliable_transportation": true,
+    "was_referred": false,
+    "referrer_name": ""
+  },
+  "resume": {
+    "file_path": "./assets/resume.pdf",
+    "file_name": "Resume.pdf",
+    "mime": "application/pdf"
+  },
+  "ai_responses": {
+    "enabled": true,
+    "provider": "huggingface",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "templates": {
+      "why_company": "I am excited about {company} because of its innovative work in technology and its commitment to excellence. My background in {field} at {school} has prepared me well for this opportunity, and I am eager to contribute to {company}'s mission while growing as a professional.",
+      "why_role": "This {role} position aligns perfectly with my skills in {skills} and my passion for building impactful software. I am particularly drawn to the opportunity to work on challenging problems and collaborate with talented engineers.",
+      "cover_letter": "Dear Hiring Manager,\n\nI am writing to express my strong interest in the {role} position at {company}. As a {degree} student in {field} at {school}, I have developed expertise in {skills}.\n\nI am confident that my technical skills and enthusiasm make me a strong candidate for this role.\n\nSincerely,\n{first_name} {last_name}"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "browser": {
+    "headless": false,
+    "slowMo": 100,
+    "timeout": 30000,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "jobSource": {
+    "repository": "SimplifyJobs/Summer2026-Internships",
+    "branch": "dev",
+    "readmePath": "README.md"
+  },
+  "application": {
+    "maxRetries": 2,
+    "retryDelay": 2000,
+    "pauseOnError": true,
+    "autoSubmit": true
+  },
+  "logging": {
+    "level": "info",
+    "outputDir": "./logs",
+    "saveScreenshots": true
+  }
+}
+

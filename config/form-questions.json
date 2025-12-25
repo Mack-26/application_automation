@@ -1,0 +1,213 @@
+{
+  "dropdown_mappings": {
+    "work_authorization": {
+      "patterns": ["authorized", "work in the us", "legally authorized", "employment eligibility", "legal right to work"],
+      "options": {
+        "yes": ["yes", "authorized", "eligible", "i am authorized"],
+        "no": ["no", "not authorized", "i am not"]
+      },
+      "profile_field": "compliance.authorized_to_work",
+      "value_map": { "true": "yes", "false": "no" }
+    },
+    "visa_status": {
+      "patterns": ["visa status", "immigration status", "work authorization type", "current status"],
+      "profile_field": "personal.work_authorization"
+    },
+    "sponsorship": {
+      "patterns": ["sponsorship", "sponsor", "require sponsorship", "need sponsorship", "visa sponsorship", "immigration sponsorship", "require visa", "need visa"],
+      "options": {
+        "yes": ["yes", "require", "need", "will require", "i will require", "i will need"],
+        "no": ["no", "do not require", "don't need", "not require", "will not require"]
+      },
+      "profile_field": "compliance.require_sponsorship",
+      "value_map": { "true": "yes", "false": "no" }
+    },
+    "sponsorship_now_or_future": {
+      "patterns": ["now or in the future", "present or future", "currently or in the future"],
+      "options": {
+        "yes": ["yes"],
+        "no": ["no"]
+      },
+      "profile_field": "compliance.require_sponsorship",
+      "value_map": { "true": "yes", "false": "no" }
+    },
+    "veteran": {
+      "patterns": ["veteran", "military", "protected veteran", "armed forces"],
+      "options": {
+        "not_veteran": ["not a protected veteran", "not a veteran", "i am not a protected veteran", "no, i am not"],
+        "veteran": ["i am a protected veteran", "yes, i am", "i identify as"],
+        "decline": ["decline to self-identify", "prefer not", "do not wish", "i don't wish"]
+      },
+      "profile_field": "compliance.veteran_status",
+      "select_contains": true
+    },
+    "disability": {
+      "patterns": ["disability", "disabilities", "disabled", "handicap"],
+      "options": {
+        "no": ["no, i do not", "no, i don't", "i do not have"],
+        "yes": ["yes, i have", "i have a disability"],
+        "decline": ["decline to self-identify", "prefer not", "do not wish", "i don't wish to answer"]
+      },
+      "profile_field": "compliance.disability_status",
+      "select_contains": true
+    },
+    "referral": {
+      "patterns": ["referred", "referral", "current employee", "hear about"],
+      "options": {
+        "no": ["no", "not referred"],
+        "yes": ["yes"]
+      },
+      "default_value": "no",
+      "profile_field": "application_defaults.was_referred"
+    },
+    "referral_name": {
+      "patterns": ["name of the employee", "referrer name", "who referred", "employee name"],
+      "profile_field": "application_defaults.referrer_name",
+      "skip_if_empty": true
+    },
+    "gender": {
+      "patterns": ["gender", "sex"],
+      "options": {
+        "male": ["male", "man"],
+        "female": ["female", "woman"],
+        "non_binary": ["non-binary", "nonbinary", "other"],
+        "decline": ["decline", "prefer not", "do not wish"]
+      },
+      "profile_field": "compliance.gender"
+    },
+    "race_ethnicity": {
+      "patterns": ["race", "ethnicity", "ethnic"],
+      "profile_field": "compliance.race_ethnicity"
+    },
+    "referral": {
+      "patterns": ["how did you hear", "referral", "source", "where did you find", "how did you find"],
+      "profile_field": "application_defaults.how_did_you_hear"
+    },
+    "relocation": {
+      "patterns": ["relocate", "relocation", "willing to move"],
+      "options": {
+        "yes": ["yes", "willing"],
+        "no": ["no", "not willing"]
+      },
+      "profile_field": "personal.willing_to_relocate",
+      "value_map": { "true": "yes", "false": "no" }
+    },
+    "background_check": {
+      "patterns": ["background check", "background screening"],
+      "options": {
+        "yes": ["yes", "agree", "consent"],
+        "no": ["no", "disagree"]
+      },
+      "profile_field": "application_defaults.willing_to_background_check",
+      "value_map": { "true": "yes", "false": "no" }
+    },
+    "start_date": {
+      "patterns": ["start date", "when can you start", "available to start", "earliest start"],
+      "profile_field": "personal.start_date"
+    },
+    "phone_device_type": {
+      "patterns": ["phone device type", "phone type", "device type"],
+      "options": {
+        "mobile": ["mobile", "cell", "cellular"],
+        "home": ["home", "landline"],
+        "work": ["work", "office"]
+      },
+      "default_value": "Mobile"
+    },
+    "phone_country_code": {
+      "patterns": ["country phone code", "country code", "phone country"],
+      "default_value": "United States of America (+1)"
+    }
+  },
+  "text_field_mappings": {
+    "phone_number": {
+      "patterns": ["phone number", "phone$", "mobile number", "cell number", "telephone"],
+      "profile_field": "personal.phone_digits",
+      "note": "Use 10-digit number only, no country code"
+    },
+    "phone_extension": {
+      "patterns": ["phone extension", "extension", "ext"],
+      "default_value": ""
+    },
+    "hourly_rate": {
+      "patterns": ["hourly", "salary expectation", "compensation expectation", "pay expectation", "rate expectation"],
+      "profile_field": "personal.hourly_rate",
+      "field_type": "textarea"
+    },
+    "internship_dates": {
+      "patterns": ["internship.*date", "start.*end.*date", "which.*date.*targeting", "availability"],
+      "profile_field": "personal.internship_dates"
+    },
+    "referrer_name": {
+      "patterns": ["name of the employee", "referrer", "who referred you", "employee who referred"],
+      "profile_field": "application_defaults.referrer_name",
+      "skip_if_empty": true
+    },
+    "address_street": {
+      "patterns": ["street", "address line 1", "address1"],
+      "profile_field": "personal.address.street"
+    },
+    "address_city": {
+      "patterns": ["city"],
+      "profile_field": "personal.address.city"
+    },
+    "address_state": {
+      "patterns": ["state", "province"],
+      "profile_field": "personal.address.state"
+    },
+    "address_zip": {
+      "patterns": ["zip", "postal", "zip code"],
+      "profile_field": "personal.address.zip"
+    },
+    "gpa": {
+      "patterns": ["gpa", "grade point"],
+      "profile_field": "education[0].gpa"
+    },
+    "graduation_date": {
+      "patterns": ["graduation", "expected graduation", "grad date"],
+      "profile_field": "education[0].graduation"
+    },
+    "school": {
+      "patterns": ["school", "university", "college", "institution"],
+      "profile_field": "education[0].school"
+    },
+    "degree": {
+      "patterns": ["degree", "degree type"],
+      "profile_field": "education[0].degree"
+    },
+    "major": {
+      "patterns": ["major", "field of study", "concentration"],
+      "profile_field": "education[0].field"
+    },
+    "portfolio": {
+      "patterns": ["portfolio", "personal website", "website url"],
+      "profile_field": "links.portfolio"
+    }
+  },
+  "open_ended_questions": {
+    "why_company": {
+      "patterns": ["why .* company", "why do you want to work", "interest in .* company", "what attracts you"],
+      "template_key": "why_company",
+      "requires_ai": true,
+      "max_length": 500
+    },
+    "why_role": {
+      "patterns": ["why .* role", "why .* position", "interest in .* role", "why are you applying"],
+      "template_key": "why_role",
+      "requires_ai": true,
+      "max_length": 500
+    },
+    "cover_letter": {
+      "patterns": ["cover letter", "letter of interest"],
+      "template_key": "cover_letter",
+      "requires_ai": true,
+      "max_length": 2000
+    },
+    "additional_info": {
+      "patterns": ["additional information", "anything else", "other information"],
+      "default_value": "",
+      "requires_ai": false
+    }
+  }
+}
+

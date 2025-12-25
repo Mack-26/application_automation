@@ -1,0 +1,173 @@
+{
+  "patterns": {
+    "greenhouse": {
+      "urlPattern": "greenhouse.io",
+      "name": "Greenhouse",
+      "resumeSelectors": [
+        "input[type='file'][name*='resume']",
+        "input[type='file'][id*='resume']",
+        "input[type='file'][aria-label*='resume' i]",
+        "input[type='file'][aria-label*='cv' i]",
+        "[data-qa='file-input']"
+      ],
+      "fieldMappings": {
+        "first_name": ["#first_name", "input[name='first_name']", "input[autocomplete='given-name']"],
+        "last_name": ["#last_name", "input[name='last_name']", "input[autocomplete='family-name']"],
+        "email": ["#email", "input[name='email']", "input[type='email']"],
+        "phone": ["#phone", "input[name='phone']", "input[type='tel']"],
+        "location": ["input[name*='location']", "input[placeholder*='location' i]"],
+        "linkedin": ["input[name*='linkedin']", "input[placeholder*='linkedin' i]"],
+        "github": ["input[name*='github']", "input[placeholder*='github' i]"]
+      }
+    },
+    "lever": {
+      "urlPattern": "jobs.lever.co",
+      "name": "Lever",
+      "resumeSelectors": [
+        "input[type='file'][name='resume']",
+        "input.resume-upload-input",
+        "[data-qa='file-input']"
+      ],
+      "fieldMappings": {
+        "first_name": ["input[name='name']", "input[placeholder*='name' i]"],
+        "email": ["input[name='email']", "input[type='email']"],
+        "phone": ["input[name='phone']", "input[type='tel']"],
+        "linkedin": ["input[name*='linkedin']", "input[name='urls[LinkedIn]']"],
+        "github": ["input[name*='github']", "input[name='urls[GitHub]']"]
+      }
+    },
+    "workday": {
+      "urlPattern": "myworkdayjobs.com",
+      "name": "Workday",
+      "resumeSelectors": [
+        "input[type='file'][data-automation-id*='resume']",
+        "input[type='file'][data-automation-id='file-upload-input-ref']",
+        "[data-automation-id='resumeUploadButton'] input[type='file']"
+      ],
+      "fieldMappings": {
+        "first_name": ["input[data-automation-id='legalNameSection_firstName']"],
+        "last_name": ["input[data-automation-id='legalNameSection_lastName']"],
+        "email": ["input[data-automation-id='email']"],
+        "phone": ["input[data-automation-id='phone-number']"],
+        "address": ["input[data-automation-id='addressSection_addressLine1']"]
+      }
+    },
+    "ashby": {
+      "urlPattern": "ashbyhq.com",
+      "name": "Ashby",
+      "resumeSelectors": [
+        "input[type='file'][name*='resume']",
+        "input[type='file'][accept*='pdf']",
+        "[data-testid='file-input']"
+      ],
+      "fieldMappings": {
+        "first_name": ["input[name='_systemfield_name']", "input[placeholder*='name' i]"],
+        "email": ["input[name='_systemfield_email']", "input[type='email']"],
+        "phone": ["input[name='phone']", "input[type='tel']"],
+        "linkedin": ["input[name*='linkedin']"],
+        "github": ["input[name*='github']"]
+      }
+    },
+    "icims": {
+      "urlPattern": "icims.com",
+      "name": "iCIMS",
+      "resumeSelectors": [
+        "input[type='file'][id*='resume']",
+        "input[type='file'].iCIMS_FileInput",
+        "#resumeUpload"
+      ],
+      "fieldMappings": {
+        "first_name": ["#firstName", "input[name='firstName']"],
+        "last_name": ["#lastName", "input[name='lastName']"],
+        "email": ["#email", "input[name='email']"],
+        "phone": ["#phone", "input[name='phone']"]
+      }
+    },
+    "custom": {
+      "urlPattern": null,
+      "name": "Custom",
+      "resumeSelectors": [
+        "input[type='file'][name*='resume' i]",
+        "input[type='file'][id*='resume' i]",
+        "input[type='file'][name*='cv' i]",
+        "input[type='file'][id*='cv' i]",
+        "input[type='file'][aria-label*='resume' i]",
+        "input[type='file'][aria-label*='cv' i]",
+        "input[type='file'][accept*='pdf']",
+        "input[type='file']"
+      ],
+      "fieldMappings": {
+        "first_name": [
+          "input[name*='first' i][name*='name' i]",
+          "input[id*='first' i][id*='name' i]",
+          "input[placeholder*='first name' i]",
+          "input[autocomplete='given-name']"
+        ],
+        "last_name": [
+          "input[name*='last' i][name*='name' i]",
+          "input[id*='last' i][id*='name' i]",
+          "input[placeholder*='last name' i]",
+          "input[autocomplete='family-name']"
+        ],
+        "email": [
+          "input[type='email']",
+          "input[name*='email' i]",
+          "input[id*='email' i]",
+          "input[autocomplete='email']"
+        ],
+        "phone": [
+          "input[type='tel']",
+          "input[name*='phone' i]",
+          "input[id*='phone' i]",
+          "input[autocomplete='tel']"
+        ],
+        "linkedin": [
+          "input[name*='linkedin' i]",
+          "input[id*='linkedin' i]",
+          "input[placeholder*='linkedin' i]"
+        ],
+        "github": [
+          "input[name*='github' i]",
+          "input[id*='github' i]",
+          "input[placeholder*='github' i]"
+        ]
+      }
+    }
+  },
+  "loginIndicators": [
+    "input[type='password']",
+    "button:has-text('Log in')",
+    "button:has-text('Sign in')",
+    "a:has-text('Log in')",
+    "a:has-text('Sign in')",
+    "[data-testid='login']",
+    "#login-form",
+    ".login-container"
+  ],
+  "captchaIndicators": [
+    "iframe[src*='recaptcha']",
+    "iframe[src*='hcaptcha']",
+    ".g-recaptcha",
+    ".h-captcha",
+    "#captcha",
+    "[data-sitekey]",
+    "iframe[title*='reCAPTCHA']"
+  ],
+  "emailVerificationIndicators": [
+    "text='verify your email'",
+    "text='check your email'",
+    "text='verification link'",
+    "text='confirm your email'",
+    "[data-testid='email-verification']"
+  ],
+  "successIndicators": [
+    "text='thank you'",
+    "text='application submitted'",
+    "text='application received'",
+    "text='successfully applied'",
+    "[data-testid='success']",
+    ".success-message",
+    ".confirmation"
+  ]
+}
+
